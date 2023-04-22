@@ -2,6 +2,7 @@
 layout: post
 title: 패스트캠퍼스 JavaScript 코딩테스트 131개 예제 & CS지식으로 끝내기 강의 1주차
 date: 2023-04-22 15:29:00 +900
+lastmod: 2023-04-22 15:50:00 +900
 categories: [CHALLENGE, Upskill JS CodingTest]
 tags: [패스트캠퍼스, 패캠, fastcampus, 자바, 자바스크립트, 파이썬, 코딩테스트, 패스트캠퍼스후기, 코딩교육, 코딩자격증]
 image: 
@@ -15,7 +16,9 @@ image:
 
 항상 *알고리즘 공부해야지* 라고 생각만 하고 알고리즘 공부를 제대로 하지 않았었는데, 나한테 코딩 테스트와 같은 문제를 줬을 때 어떤 식으로 문제를 해결해나가야 하는지 많은 고민과 효율적이지 못한 방식으로 문제를 풀어나가는 것 같았다. <br>
 
-동빈나 강사님의 알고리즘 강의를 듣게 된 이후로 데일리 루틴으로 알고리즘 문제 풀기를 넣게 되었다. 뭐든지 꾸준하게 하면 늘 수밖에 없으니까 당장 급하게 하는 것보다 정확하게 짚고 넘어가는 걸 중점으로 두고 학습할 예정이다.
+동빈나 강사님의 알고리즘 강의를 듣게 된 이후로 데일리 루틴으로 알고리즘 문제 풀기를 넣게 되었다. 뭐든지 꾸준하게 하면 늘 수밖에 없으니까 당장 급하게 하는 것보다 정확하게 짚고 넘어가는 걸 중점으로 두고 학습할 예정이다. 
+
+<br>
 
 # 🔗 Part1 - Ch01 핵심 내용 (주관적)
 ## 1. 코딩 테스트 알아보기
@@ -26,7 +29,7 @@ image:
 ## 2. 요구사항에 따라 적절한 알고리즘 설계하기
 - 제일 먼저 확인해야 하는 내용은 **시간 제한(수행 시간 요구사항)** 이다.
 
-### e.g. 시간 제한이 1초인 문제를 만났을 때
+**e.g. 시간 제한이 1초인 문제를 만났을 때**
 - 의 범위가 500인 경우: 시간복잡도가 $O(N^3)$ 인 알고리즘을 설계하면 문제를 풀 수 있다.
 - $N$의 범위가 2,000인 경우: 시간복잡도가 $O(N^2)$ 인 알고리즘을 설계하면 문제를 풀 수 있다.
 - $N$의 범위가 100,000인 경우: 시간복잡도가 $O(NlogN)$ 인 알고리즘을 설계하면 문제를 풀 수 있다.
@@ -51,17 +54,17 @@ for (let i = 0; i <= 100; i++) {
 console.log(result);
 ```
 
-## 4. JavaScript 기본 입력 - `fs 모듈`
+## 4. JavaScript 기본 입력 - fs 모듈
 - 입력이 `txt` 파일 형태로 주어지는 경우, 파일 시스템 모듈을 사용한다.
 
-**e.g.** `/dev/stdin/` 적힌 텍스트를 읽어오는 경우 다음과 같이 입력한다.
+**e.g. `/dev/stdin/` 적힌 텍스트를 읽어오는 경우 다음과 같이 입력한다.**
 
 ```js
 let fs = require('fs');
 let input = fs.readFileSync('/dev/stdin').toString().split('\n');
 ```
 
-## 5. JavaScript 기본 입력 - `readline 모듈`
+## 5. JavaScript 기본 입력 - readline 모듈
 한 줄씩 입력을 받아서 처이하려 정답을 출력할 때는 `readline` 모듈을 사용할 수 있다.
 
 ```js
@@ -81,19 +84,24 @@ rl.on("line", function (line) {
 });
 ```
 
-# 📃 Week 01 Review
-<center><img src="https://user-images.githubusercontent.com/97720335/233762912-4c107493-5be9-4c66-a1c8-f11cb70ebfd6.png" width="80%" /></center>
+<br>
 
-<center><img src="https://user-images.githubusercontent.com/97720335/233764292-3cffe322-277a-43a0-ae0a-ca29680ba03e.JPG" width="80%" /></center>
+# 📃 Week 01 Review
+밑에 링크는 내가 생성한 깃 리포지토리다.
+
+[[My Repository] Daily Algorithmic Problem Solving Repository](https://github.com/sineTlsl/Algorithm)
+
+<center><img src="https://user-images.githubusercontent.com/97720335/233764572-5775ce6c-9f20-47e6-be70-948c3e93c105.png" /></center>
 
 코딩 테스트가 무엇인 지, 문제 풀이를 위한 JavaScript 핵심 문법은 무엇인 지 알아보는 시간이었다. JavaScript의 기본적인 `조건문`, `반복문`, `배열`, `문자열` 부분은 강의만 듣고 바로 문제를 풀어보았고, 하나하나 문제를 해결 해나갈 때마다 뿌듯했다. 앞으로 더 기대가 되는 알고리즘!! 🔥
 
-<center><img src="https://user-images.githubusercontent.com/97720335/233764572-5775ce6c-9f20-47e6-be70-948c3e93c105.png">
-</center>
+<center><img src="https://user-images.githubusercontent.com/97720335/233762912-4c107493-5be9-4c66-a1c8-f11cb70ebfd6.png" /></center>
 
-밑에 링크는 내가 생성한 깃 리포지토리다.
- 
-[[My Repository] Daily Algorithmic Problem Solving Repository](https://github.com/sineTlsl/Algorithm)
+<center><img src="https://user-images.githubusercontent.com/97720335/233764292-3cffe322-277a-43a0-ae0a-ca29680ba03e.JPG" /></center>
+
+
+
+
 
 <br>
 
