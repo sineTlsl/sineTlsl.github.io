@@ -18,15 +18,11 @@ timezone: Asia/Seoul
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: sineTlsl's blog ☁︎  # the main title
-
-tagline: Front-End 개발자가 되고싶은 시은임니다 . .. # it will display as the sub-title
-
+title: sineTlsl's blog ☁︎  
+tagline: Front-End 개발자가 되고싶은 시은임니다 . .. 
 description: >- # used by seo meta and the atom feed
   A minimal, responsive and feature-rich Jekyll theme for technical writing.
-
-# fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
-url: "https://sinetlsl.github.io"
+url: https://sinetlsl.github.io
 
 github:
   username: sineTlsl # change to your github username
