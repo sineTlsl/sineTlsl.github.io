@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 패스트캠퍼스 JavaScript 코딩테스트 131개 예제 & CS지식으로 끝내기 강의 1주차
-date: 2023-04-22 00:45:00 +900
+date: 2023-04-22 13:05:00 +900
 categories: [CHALLENGE, Upskill JS CodingTest]
 tags: [패스트캠퍼스, 패캠, fastcampus, 자바, 자바스크립트, 파이썬, 코딩테스트, 패스트캠퍼스후기, 코딩교육, 코딩자격증]
 image: 
@@ -34,11 +34,14 @@ image:
 
 ## 3. JavaScript 기본 출력
 알고리즘 문제를 풀 때, 표준 출력을 `console.log()` 를 이용한다.
+
 ```js
 console.log("Hello World!");
 ```
+
 ### ❓ 만약 문제를 풀 때 출력 과정만으로 시간 초과를 받을 경우에는?
 여러 출력 결과를 한 줄에 하나씩 출력할 때 매번 `console.log()` 를 실행하지 않고, 하나의 문자열에 결과를 저장해서 한 꺼번에 출력하는 것이 대게 더 빠르게 수행된다.
+
 ```js
 let result = "";
 
@@ -52,6 +55,7 @@ console.log(result);
 - 입력이 `txt` 파일 형태로 주어지는 경우, 파일 시스템 모듈을 사용한다.
 
 **e.g.** `/dev/stdin/` 적힌 텍스트를 읽어오는 경우 다음과 같이 입력한다.
+
 ```js
 let fs = require('fs');
 let input = fs.readFileSync('/dev/stdin').toString().split('\n');
@@ -59,6 +63,7 @@ let input = fs.readFileSync('/dev/stdin').toString().split('\n');
 
 ## 5. JavaScript 기본 입력 - `readline 모듈`
 한 줄씩 입력을 받아서 처이하려 정답을 출력할 때는 `readline` 모듈을 사용할 수 있다.
+
 ```js
 const rl = require("readline").createInterface({
   input: process.stdin,
@@ -77,17 +82,17 @@ rl.on("line", function (line) {
 ```
 
 # 📃 Week 01 Review
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/97720335/233762912-4c107493-5be9-4c66-a1c8-f11cb70ebfd6.png" width="80%" />
-  <img src="https://user-images.githubusercontent.com/97720335/233764292-3cffe322-277a-43a0-ae0a-ca29680ba03e.JPG" width="80%" />
-</p>
+<center><img src="https://user-images.githubusercontent.com/97720335/233762912-4c107493-5be9-4c66-a1c8-f11cb70ebfd6.png" width="80%" /></center>
+
+<center><img src="https://user-images.githubusercontent.com/97720335/233764292-3cffe322-277a-43a0-ae0a-ca29680ba03e.JPG" width="80%" /></center>
+
 코딩 테스트가 무엇인 지, 문제 풀이를 위한 JavaScript 핵심 문법은 무엇인 지 알아보는 시간이었다. JavaScript의 기본적인 `조건문`, `반복문`, `배열`, `문자열` 부분은 강의만 듣고 바로 문제를 풀어보았고, 하나하나 문제를 해결 해나갈 때마다 뿌듯했다. 앞으로 더 기대가 되는 알고리즘!! 🔥
 
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/97720335/233764572-5775ce6c-9f20-47e6-be70-948c3e93c105.png">
-</p>
+<center><img src="https://user-images.githubusercontent.com/97720335/233764572-5775ce6c-9f20-47e6-be70-948c3e93c105.png">
+</center>
 
-밑에 링크는 내가 생성한 깃 리포지토리다. <br>
+밑에 링크는 내가 생성한 깃 리포지토리다.
+ 
 [[My Repository] Daily Algorithmic Problem Solving Repository](https://github.com/sineTlsl/Algorithm)
 
 <br>
