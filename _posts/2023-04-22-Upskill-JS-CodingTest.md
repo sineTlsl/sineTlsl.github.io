@@ -5,12 +5,12 @@ date: 2023-04-22 15:29:00 +900
 lastmod: 2023-04-22 20:24:00 +900
 categories: [CHALLENGE, Upskill JS CodingTest]
 tags: [패스트캠퍼스, 패캠, fastcampus, 자바, 자바스크립트, 파이썬, 코딩테스트, 패스트캠퍼스후기, 코딩교육, 코딩자격증]
+use_math: true
+comments: true
 image: 
   path: https://user-images.githubusercontent.com/97720335/233675262-28867749-fd9d-4193-924e-8918d1a85517.png
   width: 700
   alt: UPSKILL JS CodingTest 표지
-use_math: true
-comments: true
 ---
 
 # 📬 본격적으로 강의를 들어가기 전 ...
