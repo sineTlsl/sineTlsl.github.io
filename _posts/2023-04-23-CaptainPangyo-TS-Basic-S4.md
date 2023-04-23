@@ -16,11 +16,11 @@ image:
 ## Todo 실습 안내
 주어진 코드에서 올바르게 타입을 변환할 수 있는 알아보는 시간이다.
 
-1. `1_todo` 폴더 안에서 `npm install` 을 해서 node_modules를 설치한다.
+**1. `1_todo` 폴더 안에서 `npm install` 을 해서 node_modules를 설치한다.**
 
 <div align="center"><img src="https://user-images.githubusercontent.com/97720335/233835875-0a12acc6-9862-4494-846f-e71ced682e5a.png" width="50%"></div>
 
-2. `tsconfig.json` 파일 수정
+**2. `tsconfig.json` 파일 수정**
 
 <div align="center"><img src="https://user-images.githubusercontent.com/97720335/233835955-a15f0652-0bf0-44b0-8611-92ca6e4484b3.png" width="60%"></div>
 
