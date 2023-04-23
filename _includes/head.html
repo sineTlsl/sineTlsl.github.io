@@ -109,9 +109,13 @@
   <!-- JavaScript -->
 
   <script src="{{ site.data.assets[origin].jquery.js | relative_url }}"></script>
-  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
   {% unless site.theme_mode %}
     {% include mode-toggle.html %}
   {% endunless %}
+
+  <!-- Custom -->
+  {% if page.use_math %}
+    {% include mathjax_support.html %}
+  {% endif %}
 </head>
