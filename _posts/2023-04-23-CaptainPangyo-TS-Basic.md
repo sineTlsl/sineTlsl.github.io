@@ -3,7 +3,7 @@ layout: post
 title: "[캡틴판교 TS] 섹션 0. 강의 오리엔테이션"
 date: 2023-04-23 15:20:00 +900
 lastmod: 2023-04-23 15:23:00 +900
-categories: [STUDY, Captain Pangyo - TS Basic]
+categories: [STUDY, Captain Pangyo-TS Basic]
 tags: [captainpangyo, typescript]
 use_math: true
 comments: true
