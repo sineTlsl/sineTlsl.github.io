@@ -1,8 +1,8 @@
 ---
 layout: post
-title: [캡틴판교 TS] 섹션 0. 강의 오리엔테이션
-date: 2023-04-23 15:30:00 +900
-lastmod: 2023-04-23 15:30:00 +900
+title: "[캡틴판교 TS] 섹션 0. 강의 오리엔테이션"
+date: 2023-04-23 15:20:00 +900
+lastmod: 2023-04-23 15:23:00 +900
 categories: [STUDY, Captain Pangyo - TS Basic]
 tags: [captainpangyo, typescript]
 use_math: true
@@ -55,8 +55,6 @@ git clone https://github.com/joshua1988/learn-typescript.git
 ### 2. VSCode로 폴더 열기
 
 <center><img src="https://user-images.githubusercontent.com/97720335/233822798-5cd3f79e-db75-4c51-8995-17cc86988f20.png"></center>
-
-<br>
 
 ## VSCode 플러그인 설치 및 구성, 플러그인 목록 안내
 - 색 테마: [Night Owl](https://marketplace.visualstudio.com/items?itemName=sdras.night-owl)
