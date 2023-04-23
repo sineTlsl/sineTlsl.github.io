@@ -10,7 +10,7 @@ comments: true
 image: 
   path: https://user-images.githubusercontent.com/97720335/233822587-60d294e1-867c-4cc0-b352-26899b803685.png
   width: 700
-  alt: '타입스크립트 입문 - 기초부터 실전까지' 강의 표지
+  alt: "'타입스크립트 입문 - 기초부터 실전까지' 강의 표지"
 ---
 
 자바스크립트로 제작된 COVID-19 세계 현황판을 타입스크립트로 변환해보면서 타입스크립트의 개념과 기초를 배워보는 강좌다.
