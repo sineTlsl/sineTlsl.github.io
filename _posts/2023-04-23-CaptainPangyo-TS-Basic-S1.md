@@ -63,10 +63,10 @@ image:
 ---
 
 ## 🧸 Feelings ...
-타입스크립트를 들어가기 전, 강의 개요 및 VSCode 세팅에 대해 알아보았다. 
-이제 타입스크립트를 처음 배우는 입장으로서 앞으로 섹션 끝날 때 마다 블로그에 작성할 계획이다. 
+`JSDOC` 과 `ts-check` 를 함께 사용할 경우에 타입스크립트처럼 사용될 수 있다는 것을 처음 알게되었다. <br>
+오늘 처음 알게된 것처럼 앞으로 알아갈게 더 많을 것 같아 설렌다 🙈
 
-<div align="center"><img src="https://user-images.githubusercontent.com/97720335/233823022-cebf4ec8-1d28-428e-b367-732ad6ab534c.png" width="90%"></div>
+<div align="center"><img src="https://user-images.githubusercontent.com/97720335/233825495-5a9050be-844e-4a60-89c9-76d63cd454cb.png"></div>
 
 <br>
 
