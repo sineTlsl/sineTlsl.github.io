@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[캡틴판교 TS] 섹션 4. 첫 번째 프로젝트 - 할 1일 관리, 애플리케이션"
+title: "[캡틴판교 TS] 섹션 4. 첫 번째 프로젝트 - 할 일 관리, 애플리케이션"
 date: 2023-04-23 20:01:00 +900
 lastmod: 2023-04-23 20:01:00 +900
 categories: [STUDY, Captain Pangyo - TS Basic]
