@@ -22,7 +22,7 @@ image:
 
 **2. `tsconfig.json` 파일 수정**
 
-<div align="center"><img src="https://user-images.githubusercontent.com/97720335/233835955-a15f0652-0bf0-44b0-8611-92ca6e4484b3.png" width="60%"></div>
+<div align="center"><img src="https://user-images.githubusercontent.com/97720335/233835955-a15f0652-0bf0-44b0-8611-92ca6e4484b3.png" width="70%"></div>
 
 <br>
 
