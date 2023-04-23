@@ -100,10 +100,6 @@ rl.on("line", function (line) {
 
 <center><img src="https://user-images.githubusercontent.com/97720335/233764292-3cffe322-277a-43a0-ae0a-ca29680ba03e.JPG" /></center>
 
-
-
-
-
 <br>
 
 <https://fastcampus.co.kr/dev_online_upjscodingtest>
