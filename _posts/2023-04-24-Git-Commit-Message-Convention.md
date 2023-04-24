@@ -2,7 +2,7 @@
 layout: post
 title: "Git Commit Message Convention"
 date: 2023-04-24 13:56:00 +900
-lastmod: 2023-04-24 13:56:00 +900
+lastmod: 2023-04-24 17:11:00 +900
 categories: [GIT]
 tags: [git]
 image: 
@@ -21,6 +21,7 @@ type(옵션): Subject // 제목
 body(옵션) // 본문
 footer(옵션) // 꼬리말
 ```
+
 > - `type` : 어떤 의도로 커밋을 했는지 type에 명시한다.
 > - `subject` : 최대 50글자가 넘지않아야하며, 마침표는 찍지 않는다. 영문으로 표기할 경우, 동사를 가장 앞에 두고 첫 글자는 대문자로 표기한다.
 > - `body` : 긴 설명이 필요한 경우에 작성한다. 무엇을 왜 하였는지 작성하는 부분으로 최대 75자를 넘기지 않아야 한다.
