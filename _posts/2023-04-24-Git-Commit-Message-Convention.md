@@ -8,6 +8,7 @@ tags: [git]
 image: 
   path: https://user-images.githubusercontent.com/97720335/233878034-e4b9bad7-48ad-4eeb-aa97-c4249c60edef.png
   width: 700
+  alt: GIT
 ---
 
 # Git Commit Message Convention
