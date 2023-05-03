@@ -66,7 +66,7 @@ interface Person2 {
 }
 ```
 
-<img src="https://user-images.githubusercontent.com/97720335/235867528-960a8885-2067-4556-b315-25b770007b6a.png" width="40%">
+<img src="https://user-images.githubusercontent.com/97720335/235867528-960a8885-2067-4556-b315-25b770007b6a.png" width="60%">
 
 
 **위에 작성한 코드를 타입 별칭으로 정의한다면?** 
@@ -78,7 +78,7 @@ type Person2 = {
 }
 ```
 
-<img src="https://user-images.githubusercontent.com/97720335/235868187-51c9ea53-a178-4681-9a17-8e41824693f0.png" width="40%">
+<img src="https://user-images.githubusercontent.com/97720335/235868187-51c9ea53-a178-4681-9a17-8e41824693f0.png" width="60%">
 
 마우스가 focus가 되면, 각 타입을 확인할 수 있다.
 
