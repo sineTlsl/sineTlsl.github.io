@@ -2,7 +2,7 @@
 layout: post
 title: "[캡틴판교 TS] 섹션 8. 이넘"
 date: 2023-05-05 13:43:00 +900
-lastmod: 2023-05-05 13:43:00 +900
+lastmod: 2023-05-05 13:44:00 +900
 categories: [STUDY, Captain Pangyo - TS Basic]
 tags: [captainpangyo, typescript]
 image: 
@@ -11,7 +11,7 @@ image:
   alt: 타입스크립트 입문 - 기초부터 실전까지 강의 표지
 ---
 
-## 이넘(Enums) 이란?
+# 이넘(Enums) 이란?
 `이넘(Enums)` 은 특정 값들의 집합을 의미하는 자료형이다.
 
 예를 들어, 다음과 같은 목록이 이넘이 될 수 있다.
