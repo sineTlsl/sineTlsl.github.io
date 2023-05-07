@@ -2,7 +2,7 @@
 layout: post
 title: 패스트캠퍼스 JavaScript 코딩테스트 131개 예제 & CS지식으로 끝내기 강의 3주차
 date: 2023-05-07 17:58:00 +900
-lastmod: 2023-05-07 17:58:00 +900
+lastmod: 2023-05-07 18:00:00 +900
 categories: [CHALLENGE, Upskill JS CodingTest]
 tags: [패스트캠퍼스, 패캠, fastcampus, 자바, 자바스크립트, 파이썬, 코딩테스트, 패스트캠퍼스후기, 코딩교육, 코딩자격증]
 use_math: true
@@ -90,7 +90,7 @@ while (queue.getLength() !== 0) {
 - 컴퓨터 운영체제, 온라인 게임 매칭 등에서 활용된다.
 - 우선순위 큐는 일반적으로 **힙(heap)을 이용해 구현**한다.
 
-## 힙(Heap)
+## 힙(Heap) 이란?
 **힙**은 원소들 중에서 최댓값 혹은 최솟값을 빠르게 찾아내는 자료구조다.
 
 - `최대 힙(max heap)` : 값이 큰 원소부터 추출한다.
