@@ -2,7 +2,7 @@
 layout: post
 title: "[캡틴판교 TS] 섹션 3. 타입스크립트 기초 - 변수와 함수 타입 정의하기"
 date: 2023-04-23 19:48:00 +900
-lastmod: 2023-04-23 19:48:00 +900
+lastmod: 2023-05-08 01:04:00 +900
 categories: [STUDY, Captain Pangyo - TS Basic]
 tags: [captainpangyo, typescript]
 image: 
@@ -123,7 +123,7 @@ function sum(a: number, b: number): number {
 
 - 자바스크립트의 특성과 같이 정의된 매개변수의 갯수 만큼 인자를 넘기지 않고 싶다면 `?` 를 이용해서 값을 생략할 수 있다.
 
-<div align="center"><img src="https://user-images.githubusercontent.com/97720335/233835290-315a13ea-014e-453c-8790-40caf9286bc3.png섹" width="90%"></div>
+<div align="center"><img src="https://user-images.githubusercontent.com/97720335/233835290-315a13ea-014e-453c-8790-40caf9286bc3.png" width="90%"></div>
 
 ---
 
