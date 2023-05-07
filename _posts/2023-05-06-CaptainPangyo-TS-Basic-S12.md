@@ -2,7 +2,7 @@
 layout: post
 title: "[캡틴판교 TS] 섹션 12. 타입 추론"
 date: 2023-05-06 15:45:00 +900
-lastmod: 2023-05-06 15:45:00 +900
+lastmod: 2023-05-07 01:01:00 +900
 categories: [STUDY, Captain Pangyo - TS Basic]
 tags: [captainpangyo, typescript]
 image: 
