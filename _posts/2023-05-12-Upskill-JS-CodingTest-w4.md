@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 패스트캠퍼스 JavaScript 코딩테스트 131개 예제 & CS지식으로 끝내기 강의 3주차
+title: 패스트캠퍼스 JavaScript 코딩테스트 131개 예제 & CS지식으로 끝내기 강의 4주차
 date: 2023-05-12 17:26:00 +900
 lastmod: 2023-05-12 17:31:00 +900
 categories: [CHALLENGE, Upskill-JS-CodingTest]
