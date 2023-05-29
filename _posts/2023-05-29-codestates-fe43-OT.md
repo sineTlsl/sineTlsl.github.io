@@ -2,7 +2,7 @@
 layout: post
 title: "[CODESTATES] 코드스테이츠 프론트엔드 "
 date: 2023-05-29 23:22:00 +900
-lastmod: 2023-29-19 23:22:00 +900
+lastmod: 2023-05-29 23:26:00 +900
 categories: [CODESTATES]
 tags: [CODESTATES, 코드스테이츠]
 use_math: true
