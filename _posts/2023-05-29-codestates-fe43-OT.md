@@ -2,12 +2,12 @@
 layout: post
 title: "[CODESTATES] 코드스테이츠 프론트엔드 "
 date: 2023-05-29 23:22:00 +900
-lastmod: 2023-05-29 23:26:00 +900
+lastmod: 2023-05-29 23:31:00 +900
 categories: [CODESTATES]
 tags: [CODESTATES, 코드스테이츠]
 use_math: true
 image: 
-  path: https://github.com/sineTlsl/sineTlsl.github.io/assets/97720335/e18393d7-0bb8-439a-a30d-842ba1fff12f
+  path: https://github.com/sineTlsl/sineTlsl.github.io/assets/97720335/9f688249-ccc9-4ccd-81ce-4629878e85ee
   width: 700
   alt: 코드스테이츠 사진
 ---
