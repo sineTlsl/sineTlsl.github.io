@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "[CODESTATES] 코드스테이츠 프론트엔드 "
+title: "[CODESTATES] 코드스테이츠 OT"
 date: 2023-05-29 23:22:00 +900
-lastmod: 2023-05-29 23:31:00 +900
+lastmod: 2023-05-29 23:34:00 +900
 categories: [CODESTATES]
 tags: [CODESTATES, 코드스테이츠]
 use_math: true
