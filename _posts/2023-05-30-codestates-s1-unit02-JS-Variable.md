@@ -1,15 +1,11 @@
 ---
 layout: post
 title: "[S1-Unit02] JavaScript 기초 - 변수(Variable)"
-date: 2023-05-30 22:15:00 +900
-lastmod: 2023-05-30 22:15:00 +900
+ddate: 2023-05-31 15:29:00 +900
+lastmod: 2023-05-31 15:29:00 +900
 categories: [CODESTATES]
 tags: [CODESTATES, 코드스테이츠, Section01]
 use_math: true
-image: 
-  path: https://github.com/sineTlsl/sineTlsl.github.io/assets/97720335/e18393d7-0bb8-439a-a30d-842ba1fff12f
-  width: 700
-  alt: 코드스테이츠 합격 사진
 ---
 
 # 변수(Variable) 란?
