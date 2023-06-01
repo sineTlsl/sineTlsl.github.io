@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[S1-Unit02] JavaScript 기초 - 함수(Function)"
-ddate: 2023-06-01 15:51:00 +900
+date: 2023-06-01 15:51:00 +900
 lastmod: 2023-06-01 15:51:00 +900
 categories: [CODESTATES]
 tags: [CODESTATES, 코드스테이츠, Section01]

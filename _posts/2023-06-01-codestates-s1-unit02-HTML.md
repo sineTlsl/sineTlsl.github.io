@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[S1-Unit03] HTML - 기본 구조와 문법"
-ddate: 2023-06-01 16:07:00 +900
+date: 2023-06-01 16:07:00 +900
 lastmod: 2023-06-01 16:14:00 +900
 categories: [CODESTATES]
 tags: [CODESTATES, 코드스테이츠, Section01]

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[S1-Unit02] JavaScript 기초 - 조건문(Conditional)"
-ddate: 2023-06-01 15:31:00 +900
+date: 2023-06-01 15:31:00 +900
 lastmod: 2023-06-01 15:31:00 +900
 categories: [CODESTATES]
 tags: [CODESTATES, 코드스테이츠, Section01]
