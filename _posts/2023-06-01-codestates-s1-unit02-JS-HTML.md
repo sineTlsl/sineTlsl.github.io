@@ -2,7 +2,7 @@
 layout: post
 title: "[S1-Unit03] HTML - 기본 구조와 문법"
 ddate: 2023-06-01 16:07:00 +900
-lastmod: 2023-06-01 16:07:00 +900
+lastmod: 2023-06-01 16:14:00 +900
 categories: [CODESTATES]
 tags: [CODESTATES, 코드스테이츠, Section01]
 use_math: true
@@ -15,6 +15,7 @@ use_math: true
 ## How to use HTML?
 - HTML은 태그(tag)들의 집합
 - `Tag` : 부등호(<>)로 묶인 HTML의 기본 구성 요소
+
 ```html
 <!DOCTYPE html>
 <html>
@@ -30,7 +31,8 @@ use_math: true
 </html>
 ```
 
-태그 내부에 내용이 없다면, (<tah></tag>와 같이 표현되는 경우) `<tag />` 와 같이 표현 가능
+태그 내부에 내용이 없다면, (`<tag></tag>` 와 같이 표현되는 경우) `<tag />` 와 같이 표현 가능
+
 ```html
 <img src="codestates-logo.png"></img>
 
@@ -50,6 +52,7 @@ use_math: true
 - `<button>` : Button
 
 ### div VS span
+
 `div` 태그는 한 줄을 차지하고, `span` 태그는 컨텐츠 크기만큼 공간을 차지한다.
 
 ```html
@@ -66,6 +69,7 @@ use_math: true
 </center>
 
 ### img: 이미지 삽입
+
 ```html
 <img src="/라푼젤.jpeg" />
 ```
@@ -85,6 +89,7 @@ use_math: true
 </center>
 
 ### ul, li: 목록 입력
+
 ```html
 <ul>
   <li>Item 1</li>
@@ -104,6 +109,7 @@ use_math: true
 
 
 ### input, textarea: 다양한 입력 폼
+
 ```html
 <input type="text" placeholder="type-here" />
 <div>
@@ -134,6 +140,7 @@ use_math: true
 <br>
 
 ## 아이디, 비밀번호 입력 창 예제 (뼈대만)
+
 ```html
 <!DOCTYPE html>
 <html lang="ko">
