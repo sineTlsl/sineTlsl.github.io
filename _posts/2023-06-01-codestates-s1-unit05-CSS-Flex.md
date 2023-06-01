@@ -2,8 +2,8 @@
 layout: post
 title: "[S1-Unit05] CSS - Flex"
 date: 2023-06-01 17:20:00 +900
-lastmod: 2023-06-01 17:20:00 +900
-categories: [CODESTATES]
+lastmod: 2023-06-01 17:30:00 +900
+categories: [CODESTATES, Section01]
 tags: [CODESTATES, 코드스테이츠, Section01]
 use_math: true
 ---
