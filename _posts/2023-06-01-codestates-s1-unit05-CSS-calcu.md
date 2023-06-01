@@ -2,7 +2,7 @@
 layout: post
 title: "[S1-Unit06] Calculator 구현 회고"
 date: 2023-06-01 17:32:00 +900
-lastmod: 2023-06-01 17:32:00 +900
+lastmod: 2023-06-01 17:49:00 +900
 categories: [CODESTATES, Section01]
 tags: [CODESTATES, 코드스테이츠, Section01, 회고]
 use_math: true
@@ -341,6 +341,7 @@ const buttonContent = target.textContent; // 클릭된 HTML 엘리먼트의 텍�
 `innerText` 를 지금까지 사용하였던 나는 `textContent` 가 생소하였다. 그러다 둘의 차이점을 찾아보게 되었고 새로 알게된 내용은 다음과 같다.
 
 ### innerText와 textContent 차이점
+
 | innerText | textContent |
 | :---: | :---: |
 | **사람이 읽을 수 있는 요소**만 처리 | `<script>` 와 `<style>` 요소를 포함한 모든 요소의 콘텐츠를 가져옴 |
