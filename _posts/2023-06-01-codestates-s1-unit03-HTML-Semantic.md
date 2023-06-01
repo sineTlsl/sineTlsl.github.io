@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "[S1-Unit03] HTML - 시맨틱 요소 (Semantic Element)"
-date: 2023-06-01 16:20:00 +900
-lastmod: 2023-06-01 16:20:00 +900
+date: 2023-06-01 16:36:00 +900
+lastmod: 2023-06-01 16:36:00 +900
 categories: [CODESTATES]
 tags: [CODESTATES, 코드스테이츠, Section01]
 use_math: true
