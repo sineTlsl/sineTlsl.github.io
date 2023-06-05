@@ -2,10 +2,14 @@
 layout: post
 title: "[S1-Unit10] JS/Browser - DOM 개요"
 date: 2023-06-05 14:07:00 +900
-lastmod: 2023-06-05 14:07:00 +900
+lastmod: 2023-06-05 14:09:00 +900
 categories: [CODESTATES, Section01]
 tags: [CODESTATES, 코드스테이츠, Section01]
 use_math: true
+image: 
+  path: https://github.com/sineTlsl/sineTlsl.github.io/assets/97720335/4a03f693-581a-40af-9f05-6eb2618a8e75
+  width: 700
+  alt: DOM 개요
 ---
 
 # DOM이란?
