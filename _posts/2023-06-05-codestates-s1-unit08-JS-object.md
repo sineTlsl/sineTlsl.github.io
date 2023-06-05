@@ -2,9 +2,9 @@
 layout: post
 title: "[S1-Unit08] JavaScript - 배열(Array)과 객체(Object)"
 date: 2023-06-05 13:25:00 +900
-lastmod: 2023-06-05 13:35:00 +900
+lastmod: 2023-06-05 14:00:00 +900
 categories: [CODESTATES, Section01]
-tags: [CODESTATES, 코드스테이츠, Section01, 회고]
+tags: [CODESTATES, 코드스테이츠, Section01]
 use_math: true
 image: 
   path: https://github.com/sineTlsl/sineTlsl.github.io/assets/97720335/827b6ec5-bd98-4db9-b505-f28a7487bd22

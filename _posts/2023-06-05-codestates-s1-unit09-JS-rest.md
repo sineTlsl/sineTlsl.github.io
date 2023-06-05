@@ -2,9 +2,9 @@
 layout: post
 title: "[S1-Unit09] JavaScript - Spread/Rest 문법 (구조 분해 할당)"
 date: 2023-06-05 13:48:00 +900
-lastmod: 2023-06-05 13:48:00 +900
+lastmod: 2023-06-05 14:00:00 +900
 categories: [CODESTATES, Section01]
-tags: [CODESTATES, 코드스테이츠, Section01, 회고]
+tags: [CODESTATES, 코드스테이츠, Section01]
 use_math: true
 ---
 
