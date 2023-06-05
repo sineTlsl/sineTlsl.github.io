@@ -2,7 +2,7 @@
 layout: post
 title: "[S2-Unit01] JavaScript - 일급 객체와 고차 함수"
 date: 2023-06-05 15:07:00 +900
-lastmod: 2023-06-05 15:07:00 +900
+lastmod: 2023-06-05 15:08:00 +900
 categories: [CODESTATES, Section02]
 tags: [CODESTATES, 코드스테이츠, Section02]
 use_math: true
@@ -16,7 +16,7 @@ use_math: true
 함수는 변수에 할당할 수 있어 배열의 요소나 객체의 속성 값으로 지정할 수 있다. 또 함수를 데이터(`string`, `number`, `boolean`, `array`, `object`) 처럼 다룰 수 있다.
 
 ### 일급 객체 특징
-> - 변수에 할당(assignment) 할 수 있다.
+- 변수에 할당(assignment) 할 수 있다.
 - 다른 함수의 전달인자(argument)로 전달될 수 있다.
 - 다른 함수의 결과로서 리턴될 수 있다.
 
