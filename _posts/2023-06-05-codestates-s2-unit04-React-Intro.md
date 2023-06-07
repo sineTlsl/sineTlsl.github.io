@@ -2,7 +2,7 @@
 layout: post
 title: "[S2-Unit04] React - React Intro"
 date: 2023-06-05 15:42:00 +900
-lastmod: 2023-06-05 15:42:00 +900
+lastmod: 2023-06-07 14:20:00 +900
 categories: [CODESTATES, Section02]
 tags: [CODESTATES, 코드스테이츠, Section02]
 use_math: true
@@ -197,5 +197,5 @@ React 프로젝트가 정상적으로 생성되고 실행될 경우에는 3000 p
 
 <br>
 
-**eference**
+**Reference**
 [CODESTATES (SEB_FE_43)](https://www.codestates.com/)
