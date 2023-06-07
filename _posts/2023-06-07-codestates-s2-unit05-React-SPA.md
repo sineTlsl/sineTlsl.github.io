@@ -2,7 +2,7 @@
 layout: post
 title: "[S2-Unit05] React - SPA"
 date: 2023-06-07 14:26:00 +900
-lastmod: 2023-06-07 14:26:00 +900
+lastmod: 2023-06-07 14:32:00 +900
 categories: [CODESTATES, Section02]
 tags: [CODESTATES, 코드스테이츠, Section02]
 use_math: true
@@ -187,4 +187,5 @@ export default App;
 <br>
 
 **Reference**
+
 [CODESTATES (SEB_FE_43)](https://www.codestates.com/)
