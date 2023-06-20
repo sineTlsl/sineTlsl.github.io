@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "[S2-Unit10] Web Server - CORS"
-date: 2023-06-13 12:10:00 +900
-lastmod: 2023-06-13 12:19:00 +900
+date: 2023-06-20 21:21:00 +900
+lastmod: 2023-06-20 21:21:00 +900
 categories: [CODESTATES, Section02]
 tags: [CODESTATES, 코드스테이츠, Section02]
 use_math: true
