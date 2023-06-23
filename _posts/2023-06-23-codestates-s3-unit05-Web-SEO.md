@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "[S3-Unit04] Web - 검색엔진 최적화 (SEO)"
+title: "[S3-Unit05] Web - 검색엔진 최적화 (SEO)"
 date: 2023-06-23 17:31:00 +900
-lastmod: 2023-06-23 17:31:00 +900
+lastmod: 2023-06-23 17:33:00 +900
 categories: [CODESTATES, Section03]
 tags: [CODESTATES, 코드스테이츠, Section03]
 use_math: true
