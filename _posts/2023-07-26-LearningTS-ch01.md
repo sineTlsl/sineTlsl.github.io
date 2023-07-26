@@ -2,8 +2,8 @@
 layout: post
 title: "[LearningTS] 자바스크립트에서 타입스크립트로"
 date: 2023-07-26 15:29:00 +900
-lastmod: 2023-07-26 15:29:00 +900
-categories: [STUDY, Learning TypeScript, ]
+lastmod: 2023-07-26 15:30:00 +900
+categories: [STUDY, Learning TypeScript]
 tags: [typescript]
 use_math: true
 image: 
