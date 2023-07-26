@@ -1,15 +1,14 @@
 ---
 layout: post
-title: "[LearningTS] 자바스크립트에서 타입스크립트로"
+title: "[LearningTS] Chapter 01. 자바스크립트에서 타입스크립트로"
 date: 2023-07-26 15:29:00 +900
-lastmod: 2023-07-26 15:30:00 +900
+lastmod: 2023-07-26 16:00:00 +900
 categories: [STUDY, Learning TypeScript]
 tags: [typescript]
 use_math: true
 image: 
   path: https://github.com/sineTlsl/sineTlsl/assets/97720335/a367fb26-a4e4-44d1-b2e0-18f617ce2101
   width: 400
-  height: 250
   alt: 러닝 타입스크립트 교재
 ---
 
