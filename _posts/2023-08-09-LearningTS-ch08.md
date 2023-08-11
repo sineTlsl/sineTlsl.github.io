@@ -2,7 +2,7 @@
 layout: post
 title: "[LearningTS] Chapter08. 클래스"
 date: 2023-08-09 22:50:00 +900
-lastmod: 2023-08-09 22:50:00 +900
+lastmod: 2023-08-11 15:15:00 +900
 categories: [STUDY, Learning TypeScript]
 tags: [typescript]
 use_math: true
@@ -414,11 +414,336 @@ interface AgeIsNotNumber {
 ```
 
 <p align="center">
-  <img src="https://github.com/FE-BookStudy/LearningTS/assets/97720335/2453a2f4-0e26-485b-ad1d-e2487fb6dc9e" width="100%" />
-  <img src="https://github.com/FE-BookStudy/LearningTS/assets/97720335/cd09103a-117d-4015-bcaa-16822bea8f8f" width="100%" />
+  <img src="https://github.com/FE-BookStudy/LearningTS/assets/97720335/2453a2f4-0e26-485b-ad1d-e2487fb6dc9e" width="90%" />
+  <img src="https://github.com/FE-BookStudy/LearningTS/assets/97720335/cd09103a-117d-4015-bcaa-16822bea8f8f" width="90%" />
 </p>
 
 두 인터페이스가 매우 다른 객체 형태를 표현하려는 경우에는 동일한 클래스로 구현하지 않아야 한다.
+
+<br>
+
+## 🌓 클래스 확장
+- 타입스크립트는 다른 클래스를 확장하거나 하위 클래스를 만드는 자바스크립트 개념에 타입 검사를 추가한다.
+- 먼저 기본 클래스에 선언된 모든 메서드나 속성은 파생 클래스라고도 하는 하위 클래스에서 사용할 수 있다.
+
+**[예제 1]**<br>
+Teacher는 StudentTeacher 하위 클래스의 인스턴스에서 사용할 수 있는 teach 메서드를 선언한다.
+
+```ts
+class Teacher {
+  teach() {
+    console.log('The surest test of discipline is its absence.');
+  }
+}
+
+class StudentTeacher extends Teacher {
+  learn() {
+    console.log('I cannot afford the luxury of a closed mind.');
+  }
+}
+
+const teacher = new StudentTeacher();
+
+teacher.teach(); // Ok (기본 클래스에 정의됨)
+teacher.learn(); // Ok (하위 클래스에 정의됨)
+```
+
+<p align="center">
+  <img src="https://github.com/FE-BookStudy/LearningTS/assets/97720335/3f6dc3e2-a694-4913-b3ff-37e980afd338" width="70%" />
+</p>
+
+타입스크립트의 구조적 타입에 따라 하위 클래스의 모든 멤버가 동일한 타입의 기본 클래스에 이미 존재하는 경우 기본 클래스의 인스턴스를 하위 클래스 대신 사용할 수 있다.
+
+**[예제 2]**<br>
+LabeledPastGrades는 선택적 속성인 PastGrades만 추가하므로 하위 클래스 대신 기본 클래스의 인스턴스를 사용할 수 있다.
+
+```ts
+class PastGrades {
+  grades: number[] = [];
+}
+
+class LabeledPastGrades extends PastGrades {
+  label?: string;
+}
+
+let subClass: LabeledPastGrades;
+
+subClass = new LabeledPastGrades(); // Ok
+subClass = new PastGrades(); // Ok
+```
+
+> 🌿 대부분의 실제 코드에서 하위 클래스는 일반적으로 기본 클래스 위에 새로운 필수 타입 정보를 추가한다. 이러한 구조적 검사 동작은 예상치 못한 것처럼 보일 수 있지만 자주 발생하지는 않는다.
+
+<br>
+
+### 2. 재정의된 생성자
+- 바닐라 자바스크립트와 마찬가지로 타입스크립트에서 하위 클래스는 자체 생성자를 정의할 필요가 없다.
+- 자체 생성자가 없는 하위 클래스는 암묵적으로 기본 클래스의 생성자를 사용한다.
+- 자바스크립트에서 하위 클래스가 자체 생성자를 선언하면 `super` 키워드를 통해 기본 클래스 생성자를 호출해야 한다.
+- 하위 클래스 생성자는 기본 클래스에서의 필요 여부와 상관없이 모든 매개변수를 선언할 수 있다.
+- 타입스크립트의 타입 검사기는 기본 클래스 생성자를 호출할 때 올바른 매개변수를 사용하는지 확인한다.
+
+**[예제 1]**<br>
+PassingAnnouncer의 생성자는 number 인수를 사용해 기본 클래스인 GradeAnnouncer의 생성자를 올바르게 호출하는 반면, FailingAnnouncer는 기본 생성자를 올바르게 호출하지 않아 타입 오류가 발생한다.
+
+```ts
+class GradeAnnouncer {
+  message: string;
+
+  constructor(grade: number) {
+    this.message = grade >= 65 ? 'Maybe next time...' : 'You pass!';
+  }
+}
+
+class PassingAnnounder extends GradeAnnouncer {
+  constructor() {
+    super(100);
+  }
+}
+```
+
+<p align="center">
+  <img src="https://github.com/FE-BookStudy/LearningTS/assets/97720335/125549f4-97f7-4915-aac0-9d36f3e1c5c7" width="60%" />
+</p>
+
+- 자바스크립트 규칙에 따르면 하위 클래스의 생성자는 `this` 또는 `super`에 접근하기 전에 반드시 기본 클래스의 생성자를 호출해야 한다.
+- 타입스크립트는 `super()`를 호출하기 전에 this 또는 super에 접근하려고 하는 경우 타입 오류를 보고한다.
+
+**[예제 2]**<br>
+ContinuedGradesTally 클래스는 super()를 호출하기 전에 생성자에서 this.grades를 잘못 참조한다.
+
+```ts
+class GradesTally {
+  grades: number[] = [];
+
+  addGrades(...grades: number[]) {
+    this.grades.push(...grades);
+
+    return this.grades.length;
+  }
+}
+```
+
+<p align="center">
+  <img src="https://github.com/FE-BookStudy/LearningTS/assets/97720335/0d24906c-314c-4d7a-bad3-a8eba9c56eab" width="90%" />
+</p>
+
+<br>
+
+### 3. 재정의된 메서드
+- 하위 클래스의 메서드가 기본 클래스의 메서드에 할당될 수 있는 한 하위 클래스는 기본 클래스와 동일한 이름으로 새 메서드를 다시 선언할 수 있다.
+- 기본 클래스를 사용하는 모든 곳에 하위 클래스를 사용할 수 있으므로 새 메서드의 타입도 기본 메서드 대신 사용할 수 있어야 한다.
+
+**[예제]**<br>
+- FailureCounter의 countGrades 메서드는 기본 GradeCounter의 countGrades 메서드의 반환 타입과 첫 번째 매개변수와 동일하기 때문에 허용된다.
+- AnyFailureChecker의 countGrades는 잘못된 반환 타입을 가지므로 타입 오류가 발생한다.
+
+```ts
+class GradeCounter {
+  countGrades(grades: string[], letter: string) {
+    return grades.filter((grade) => grade === letter).length;
+  }
+}
+
+class FailureCounter extends GradeCounter {
+  countGrades(grades: string[]) {
+    return super.countGrades(grades, 'F');
+  }
+}
+```
+
+<p align="center">
+  <img src="https://github.com/FE-BookStudy/LearningTS/assets/97720335/90b4759d-fcba-40f6-bd62-ce63fed5be67" width="95%" />
+  <img src="https://github.com/FE-BookStudy/LearningTS/assets/97720335/1da41164-64ed-489a-950f-6e8bcf91ba68" width="70%" />
+  <img src="https://github.com/FE-BookStudy/LearningTS/assets/97720335/25fcdae1-ca84-4c7f-beb2-8c83a22a2ed9" width="60%" />
+</p>
+
+<br>
+
+### 4. 재정의된 속성
+- 하위 클래스는 새 타입을 기본 클래스의 타입에 할당할 수 있는 한 동일한 이름으로 기본 클래스의 속성을 명시적으로 다시 선언할 수 있다.
+- 재정의된 메서드와 마찬가지로 하위 클래스는 기본 클래스와 구조적으로 일치해야 한다.
+- 속성을 다시 선언하는 대부분의 하위 클래스는 해당 속성을 유니언 타입의 더 구체적인 하위 집합으로 만들거나 기본 클래스 속성 타입에서 확장되는 타입으로 만든다.
+
+**[예제 1]**<br>
+기본 클래스 Assignment는 grade를 number | undefined로 선언하고 하위 클래스 GradeAssignment는 grade를 항상 존재하는 number 타입으로 선언한다.
+
+```ts
+class Assignment {
+  grade?: number;
+}
+
+class GradeAssignment extends Assignment {
+  grade: number;
+
+  constructor(grade: number) {
+    super();
+    this.grade = grade;
+  }
+}
+```
+
+속성의 유니언 타입의 허용된 값 집합을 확장할 수는 없으며, 만약 확장한다면 하위 클래스 속성은 더 이상 기본 클래스 속성 타입에 할당할 수 없다.
+
+**[예제 2]**<br>
+VagueGrade의 value는 기본 클래스 NumbericGrade의 number 타입에 | string을 추가하려고 하므로 타입 오류가 발생한다.
+
+<p align="center">
+  <img src="https://github.com/FE-BookStudy/LearningTS/assets/97720335/450dbe26-2129-451b-8eb2-d3931f185769" width="100%" />
+  <img src="https://github.com/FE-BookStudy/LearningTS/assets/97720335/b9e53922-f15d-4c80-a6db-d9baa04a4ffd" width="60%" />
+</p>
+
+<br>
+
+## 🌓 추상 클래스
+- 때로는 일부 메서드의 구현을 선언하지 않고, 대신 하위 클래스가 해당 메서드를 제공할 것을 예상하고 기본 클래스를 만드는 방법이 유용할 수 있다.
+- 추상화하려는 클래스 이름과 메서드 앞에 타입스크립트의 `abstract` 키워드를 추가한다.
+- 이러한 추상화 메서드 선언은 추상화 기본 클래스에서 메서드의 본문을 제공하는 것을 건너뛰고, 대신 인터페이스와 동일한 방식으로 선언된다.
+
+**[예제 1]**<br>
+- School 클래스와 getStudentTypes 메서드는 abstract로 표시된다.
+- 그러므로 하위 클래스인 Preschool과 Absence는 getStudentTypes를 구현해야 한다.
+
+```ts
+abstract class School {
+  readonly name: string;
+
+  constructor(name: string) {
+    this.name = name;
+  }
+
+  abstract getStudentTypes(): string[];
+}
+
+class Preschool extends School {
+  getStudentTypes() {
+    return ['preschooler'];
+  }
+}
+```
+
+<p align="center">
+  <img src="https://github.com/FE-BookStudy/LearningTS/assets/97720335/d57214be-26ef-4d48-b531-8f1437f2ea3b" width="100%" />
+</p>
+
+- 구현이 존재한다고 가정할 수 있는 일부 메서드에 대한 정의가 없기 때문에 추상 클래스를 직접 인스턴스화할 수 없다.
+- 추상 클래스가 아닌 클래스만 인스턴스화할 수 있다.
+
+**[예제 2]**<br>
+School 예제에서 new School을 호출하려고 하면 타입스크립트 오류가 발생한다.
+
+<p align="center">
+  <img src="https://github.com/FE-BookStudy/LearningTS/assets/97720335/5ae9c797-4186-46a7-89f9-c54f915f9898" width="65%" />
+</p>
+
+- 추상 클래스는 클래스의 세부 사항이 채워질 거라 예상되는 프레임워크에서 자주 사용된다.
+- 클래스에서 앞서 본 school: School 예제에서처럼 값이 클래스를 준수해야 함을 나타내는 타입 에너테이션으로 사용할 수 있다.
+- 그러나 새 인스턴스를 생성하려면 하위 클래스를 사용해야 한다.
+
+<br>
+
+## 🌓 멤버 접근성
+- 자바스크립트에서는 캘래스 멤버 이름 앞에 `#`을 추가해 private 클래스 멤버임을 나타낸다.
+- private 클래스 멤버는 해당 클래스 인스턴스에서만 접근할 수 있다.
+- 자바스크립트 런타임은 클래스 외부 코드 영역에서 private 메서드나 속성에 접근하려고 하면 오류를 발생시킴으로써 프라이버시를 강화한다.
+- 타입스크립트의 클래스 지원은 자바스크립트의 # 프라이버시보다 먼저 만들어졌다.
+- 또한 타입스크립트는 private 클래스 멤버를 지원하지만, 타입 시스템에만 존재하는 클래스 메서드와 속성에 대해 조금 더 미묘한 프라이버시 정의 집합을 허용한다.
+
+**타입스크립트의 멤버 접근성(가시성)은 클래스 멤버의 선언 이름 앞에 다음 키워드 중 하나를 추가해 만든다.**
+- `public(기본값)` : 모든 곳에서 누구나 접근 가능
+-  `protected` : 클래스 내부 또는 하위 클래스에서만 접근 가능
+- `private` : 클래스 내부에서만 접근 가능
+
+이러한 키워드는 순수하게 타입 시스템 내에 존재하며, 코드가 자바스크립트로 컴파일되면 다른 모든 타입 시스템 구문과 함께 키워드도 제거된다.
+
+**[예제 1]**<br>
+- Base 클래스는 두 개의 public 멤버와 한 개의 protected. 한 개의 private, 그리고 #truePrivate을 사용해 한 개의 private을 선언한다.
+- Subclass는 public과 protected 멤버는 접근할 수 있지만 private과 #truePrivate은 접근할 수 없다.
+
+```ts
+class Base {
+  isPublicImplicit = 0;
+  public isPublicExplicit = 1;
+  protected isProtected = 2;
+  private isPrivate = 3;
+  #truePrivate = 4;
+}
+```
+
+<p align="center">
+  <img src="https://github.com/FE-BookStudy/LearningTS/assets/97720335/79787642-5a2d-4699-850a-a675d1ec9985" width="80%" />
+  <img src="https://github.com/FE-BookStudy/LearningTS/assets/97720335/d851e609-ed40-4048-956c-6f38365d7505" width="90%" />
+  <img src="https://github.com/FE-BookStudy/LearningTS/assets/97720335/a85c1d60-643d-49f8-95fa-4b6e759da60c" width="90%" />
+  <img src="https://github.com/FE-BookStudy/LearningTS/assets/97720335/2f5e2439-015b-45e4-8e3a-8d86acd38eda" width="80%" />
+</p>
+
+- 타입스크립트의 멤버 접근성은 타입 시스템에서만 존재하는 반면 자바스크립트의 private 선언은 런타임에도 존재한다는 점이 주요 차이점이다.
+- protected 또는 private으로 선언된 타입스크립트 클래스 멤버는 명시적으로 또는 암묵적으로 public으로 선언된 것처럼 동일한 자바스크립트 코드로 컴파일된다.
+- 인터페이스와 타입 애너테이션처럼 접근성 키워드는 자바스크립트로 컴파일될 때 제거된다.
+- 자바스크립트 런타임에서는 # private 필드만 진정한 private이다.
+- 접근성 제한자는 readonly와 함께 표시할 수 있다.
+- readonly와 명시적 접근성 키워드로 멤버를 선언하려면 접근성 키워드를 먼저 적어야 한다.
+
+**[예제 2]**<br>
+TwoKeywords 클래스는 name 멤버를 private과 readonly로 선언한다.
+
+```ts
+class TwoKeywords {
+  private readonly name: string;
+
+  constructor() {
+    this.name = 'Anne Sullivan'; // Ok
+  }
+
+  log() {
+    console.log(this.name); // Ok
+  }
+}
+
+const two = new TwoKeywords();
+```
+
+<p align="center">
+  <img src="https://github.com/FE-BookStudy/LearningTS/assets/97720335/3f66dbf8-0a61-4391-9bde-64ec5fc3ee9d" width="80%" />
+</p>
+
+- 타입스크립트의 이전 멤버 접근성 키워드를 자바스크립트의 # private 필드와 함께 사용할 수 없다는 점을 기억해야 한다.
+- private 필드는 기본적으로 항상 private이므로 private 키워드를 추가로 표시할 필요가 없다.
+
+<br>
+
+### 정적 필드 제한자
+- 자바스크립트는 `static` 키워드를 사용해 클래스 자체에서 멤버를 선언한다.
+- 타입스크립트는 static 키워드를 단독으로 사용하거나 readonly와 접근성 키워드를 함께 사용할 수 있도록 지원한다.
+- 함께 사용할 경우 접근성 키워드를 먼저 작성하고, 그 다음 static, readonly 키워드가 온다.
+
+**[예제]**<br>
+Question 클래슨느 protected, static, readonly를 모두 사용해 prompt와 answer 속성을 만든다.
+
+```ts
+class Question {
+  protected static readonly answer: 'bash';
+  protected static readonly prompt =
+    "What's an ogre's favorite programming language?";
+
+  guess(getAnswer: (prompt: string) => string) {
+    const answer = getAnswer(Question.prompt);
+
+    // Ok
+    if (answer === Question.answer) {
+      console.log('You got it!');
+    } else {
+      console.log('Try again...');
+    }
+  }
+}
+```
+
+<p align="center">
+  <img src="https://github.com/FE-BookStudy/LearningTS/assets/97720335/0e65a743-787b-47ee-8281-b786e27bab5e" width="100%" />
+</p>
+
+static 클래스 필드에 대해 readonly와 접근성 제한자를 사용하면 해당 필드가 해당 클래스 외부에서 접근되거나 수정되는 것을 제한하는 데 유용하다.
 
 <br>
 
