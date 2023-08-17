@@ -2,7 +2,7 @@
 layout: post
 title: "[LearningTS] Chapter09. 타입 제한자"
 date: 2023-08-17 15:12:00 +900
-lastmod: 2023-08-17 15:12:00 +900
+lastmod: 2023-08-17 15:17:00 +900
 categories: [STUDY, Learning TypeScript]
 tags: [typescript]
 use_math: true
@@ -127,9 +127,9 @@ function typePredicate(input: WideTye): input is NarrowType;
 ```
 
 **[예제 2]**<br>
-- 이전 예제의 isNumberOrString 함수에서 value를 value is number | string으로 명시적으로 변경하면 명시적 반환 타입을 가질 수 있다.
-- 그러면 타입스크립트는 value가 number | string인 경우의 코드 블록은 number | string 타입의 값을 가져야 한다고 추론한다.
-- 반면에 value가 number | string이 아닌 경우의 코드 블록은 null | undefined 타입의 값을 가져야 한다.
+- 이전 예제의 isNumberOrString 함수에서 value를 `value is number | string`으로 명시적으로 변경하면 명시적 반환 타입을 가질 수 있다.
+- 그러면 타입스크립트는 value가 `number | string`인 경우의 코드 블록은 `number | string` 타입의 값을 가져야 한다고 추론한다.
+- 반면에 value가 `number | string`이 아닌 경우의 코드 블록은 `null | undefined` 타입의 값을 가져야 한다.
 
 ```ts
 function isNumberOrString(value: unknown): value is number | string {
