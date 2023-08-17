@@ -2,7 +2,7 @@
 layout: post
 title: "[LearningTS] Chapter08. 클래스"
 date: 2023-08-09 22:50:00 +900
-lastmod: 2023-08-11 15:15:00 +900
+lastmod: 2023-08-17 15:55:00 +900
 categories: [STUDY, Learning TypeScript]
 tags: [typescript]
 use_math: true
@@ -24,7 +24,7 @@ image:
 - 바벨은 첫번째 커밋이 있은 후 몇 년이 흘렸고, 최신 자바스크립트 구문을 오래된 구문으로 변환하는 Traceur와 같은 이전 도구들을 완전히 주류로 채택 받지 못했다.
 - 타입스크립트의 초기 마케팅과 기능들은 이런 자바스크립트 세계에 맞춰져 있었다.
 - 타입스크립트의 타입 검사기 외에도 트랜스파일러가 강조되었고, 그 예시로 클래스가 자주 등장했다.
-- 오늘날 타입스크립트의 클래스 지원은 모든 자바스크립트 언어 기능을 지원하느 많은 기능 중 하나에 불과한다.
+- 오늘날 타입스크립트의 클래스 지원은 모든 자바스크립트 언어 기능을 지원하는 많은 기능 중 하나에 불과한다.
 - 타입스크립트는 클래스 사용이나 다른 인기 있는 자바스크립트 패턴을 권장하지도 막지도 않는다.
 
 <br>
@@ -426,7 +426,7 @@ interface AgeIsNotNumber {
 - 타입스크립트는 다른 클래스를 확장하거나 하위 클래스를 만드는 자바스크립트 개념에 타입 검사를 추가한다.
 - 먼저 기본 클래스에 선언된 모든 메서드나 속성은 파생 클래스라고도 하는 하위 클래스에서 사용할 수 있다.
 
-**[예제 1]**<br>
+**[예제]**<br>
 Teacher는 StudentTeacher 하위 클래스의 인스턴스에서 사용할 수 있는 teach 메서드를 선언한다.
 
 ```ts
@@ -450,6 +450,47 @@ teacher.learn(); // Ok (하위 클래스에 정의됨)
 
 <p align="center">
   <img src="https://github.com/FE-BookStudy/LearningTS/assets/97720335/3f6dc3e2-a694-4913-b3ff-37e980afd338" width="70%" />
+</p>
+
+<br>
+
+### 1. 할당 가능성 확장
+- 파생 인터페이스가 기본 인터페이스를 확장하는 것과 마찬가지로 하위 클래스도 기본 클래스의 멤버를 상속한다.
+- 하위 클래스의 인스턴스는 기본 클래스의 모든 멤버를 가지므로 기본 클래스의 인스턴스가 필요한 모든 곳에서 사용할 수 있다.
+- 만약 기본 클래스에 하위 클래스가 필요할 때 사용할 수 없다.
+
+**[예제 1]**<br>
+Lesson 클래스의 인스턴스는 파생된 OnlineLesson 인스턴스가 필요한 곳에서 사용할 수 없지만, 파생된 인스턴스는 기본 클래스 또는 하위 클래스를 충족하는 데 사용할 수 있다.
+
+```ts
+class Lesson {
+  subject: string;
+
+  constructor(subject: string) {
+    this.subject = subject;
+  }
+}
+
+class OnlineLesson extends Lesson {
+  url: string;
+
+  constructor(subject: string, url: string) {
+    super(subject);
+    this.url = url;
+  }
+}
+
+let lesson: Lesson;
+lesson = new Lesson('coding'); // Ok
+lesson = new OnlineLesson('coding', 'oreilly.com'); // Ok
+
+let online: OnlineLesson;
+
+online = new OnlineLesson('coding', 'oreilly.com'); // Ok
+```
+
+<p align="center">
+  <img src="https://github.com/FE-BookStudy/LearningTS/assets/97720335/ffc87b29-bc01-4544-a4e0-c0d26e0f5f39" width="70%" />
 </p>
 
 타입스크립트의 구조적 타입에 따라 하위 클래스의 모든 멤버가 동일한 타입의 기본 클래스에 이미 존재하는 경우 기본 클래스의 인스턴스를 하위 클래스 대신 사용할 수 있다.
