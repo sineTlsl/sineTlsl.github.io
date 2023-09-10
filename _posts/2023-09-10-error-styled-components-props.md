@@ -2,13 +2,13 @@
 layout: post
 title: "[Error] Warning: Received true for a non-boolean attribute 에러 해결"
 date: 2023-09-10 20:10:00 +900
-lastmod: 2023-09-10 20:18:00 +900
+lastmod: 2023-09-10 20:28:00 +900
 categories: [Error, React]
 tags: [Error, React, styled-components]
 use_math: true
 ---
 
-# 에러 발생 원인은?
+## 🔺 에러 발생 원인은?
 styled-components 라이브러리를 사용하던 중, 폼 유효성 검사를 반환해서 `boolean` 값으로 넘어가 props로 속성을 전달해주는데, 이때 에러가 발생하였다.
 
 <p align="center">
@@ -24,7 +24,7 @@ If you want to write it to the DOM, pass a string instead: active="true" or acti
 
 <br>
 
-# 에러 처리 전 코드는?
+## ❌ 에러 처리 전 코드는?
 
 기존의 코드는 다음과 같다. 
 
@@ -52,12 +52,12 @@ const ContentTabItems = styled.li<{ active: boolean }>`
 
 <br>
 
-# 그럼 어떻게 해결해야할까?
+## ⭕️ 그럼 어떻게 해결해야할까?
 내가 에러를 해결한 방법은 `transient props ($)`을 사용하는 것이였다.
 
 [styled-components 공식사이트](https://styled-components.com/docs/faqs#why-am-i-getting-html-attribute-warnings)에 자세하게 나와있다. 나는 한참 삽질하다가 공식문서에서 찾은거지만... 공식문서를 잘 보자..!!!
 
-## transient props ($)
+### transient props ($)
 - `$` 는 styled-components의 v5.1.0부터 도입된 `transient props`의 일부다.
 - styled-components에서 컴포넌트에 전달된 모든 props는 DOM 요소에도 전달되는데, DOM에서 지원하지 않는 prop를 받는 경우 React는 내가 위에서 발생한 에러처럼 발생시킨다.
 - 이때, styled-components는 `transient props`라는 개념을 도입한 것이다.
