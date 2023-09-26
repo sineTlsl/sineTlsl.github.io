@@ -2,7 +2,7 @@
 layout: post
 title: "[S1-Unit09] JavaScript - 스코프(Scope)"
 date: 2023-06-05 13:43:00 +900
-lastmod: 2023-06-05 14:00:00 +900
+lastmod: 2023-09-26 12:25:00 +900
 categories: [CODESTATES, Section01]
 tags: [CODESTATES, 코드스테이츠, Section01]
 use_math: true
@@ -101,6 +101,7 @@ function 키워드를 사용하면 `함수 스코프` 이며, 이 부분은 화�
 - 값을 재할당하는 경우, `TypeError` 를 낸다.
 
 ### 키워드 비교
+
 | | let | var | const |
 | :---: | :---: | :---: | :---: |
 | &emsp;유효 범위&emsp; | 블록 스코프 및 함수 스코프 | 블록 스코프 및 함수 스코프 | 함수 스코프 |
