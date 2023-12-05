@@ -2,27 +2,32 @@
 layout: post
 title: "[S2-Unit04] React - React Intro"
 date: 2023-06-05 15:42:00 +900
-lastmod: 2023-06-07 14:20:00 +900
+lastmod: 2023-12-05 18:19:00 +900
 categories: [CODESTATES, Section02]
 tags: [CODESTATES, 코드스테이츠, Section02]
 use_math: true
-image: 
+image:
   path: https://github.com/sineTlsl/sineTlsl.github.io/assets/97720335/9e0481a2-04fd-4d82-be2b-cc8948e1a3bf
   width: 900
   alt: React
 ---
 
 ## React란?
+
 리액트(React)는 프론트엔드 개발을 위한 JavaScript 오픈소스 라이브러리다.
 
 ## React 특징
+
 ### 1. 선언형 (Declarative)
+
 React는 한 페이지를 보여주기 위해 HTML, CSS, JS로 나눠서 적기 보다는 하나의 파일에 명시적으로 작성할 수 있게 `JSX` 를 활용한 선언형 프로그래밍을 지향한다.
 
 ### 2. 컴포넌트 기반 (Component-Based)
+
 React는 하나의 기능 구현을 위해 여러 종류의 코드를 묶어둔 컴포넌트를 기반으로 개발한다. 컴포넌트로 분리하면 서로 독립적이고 재사용 가능하기 때문에, 기능 자체에 집중하여 개발할 수 있다.
 
 ### 3. 범용성 (Learn Once, Write Anywhere)
+
 React는 JavaScript 프로젝트에서 어디에든 유연하게 적용될 수 있다. Facebook에서 관리되어 안정적이고, 가장 유명하며, React Native로 모바일 개발도 가능하다.
 
 ## Component (컴포넌트)
@@ -61,6 +66,7 @@ React에서는 JSX를 이용해서 DOM보다 명시적으로 코드를 작성할
 사진을 보면 왼쪽에는 JSX가 없어도 React 요소를 만들 수 있지만 코드가 복잡한 것을 확인할 수 있다. 반면, 오른쪽에는 JSX를 사용함으로 코드를 이해하기 쉬워진다.
 
 **eact 로 엘리먼트 생성하기 예제 (JSX가 없을때와 있을 때 비교)**
+
 ```jsx
 import React from "react";
 
@@ -83,35 +89,42 @@ function App() {
 export default App;
 ```
 
-위 `App.js` 에서는 한 개의 JavaScript 파일 안에서 HTML과 JavaScript로 나누어졌던 두 가지 일을 한 번에 처리하고 있다. 
+위 `App.js` 에서는 한 개의 JavaScript 파일 안에서 HTML과 JavaScript로 나누어졌던 두 가지 일을 한 번에 처리하고 있다.
 
 HTML과 JavaScript를 한번에 작성하여 하나의 파일에서 웹 애플리케이션의 구조와 동작을 한눈에 파악할 수 있다. JSX는 개발자가 코드만 바라보는게 아니라 구조를 바라보게 돕는다.
 
 <br>
 
 ### JSX 규칙
-**1. 하나의 element 안에 모든 엘리먼트가 포함된다.** 
+
+**1. 하나의 element 안에 모든 엘리먼트가 포함된다.**
+
 > JSX에서 여러 element를 작성하는 경우, 최상위에서 opening tag와 closing tag로 감싸주어야 한다.
 
 **2. 엘리먼트 클래스 사용 시, className 으로 표기한다.**
+
 > 만약 class로 작성하게 된다면, React에서는 이를 html 클래스 속성 대신 자바스크립트 클래스로 받아들이기 때문에 주의해야 한다.
 
 **3. JavaScript 표현식 사용 시, 괄호({})를 이용한다.**
+
 > 중괄호를 사용하지 않으면 일반 텍스트로 인식한다.
 
-**4. 사용자 정의 컴포넌트는 **문자** 시작한다.**
+**4. 사용자 정의 컴포넌트는 대문자로 시작한다.**
+
 > 대문자로 작성된 JSX 컴포넌트를 `사용자 정의 컴포넌트` 라고 한다. 만약, 소문자로 시작하게 되면 일반적인 HTML element로 인식을 하게 된다.
 
-**5. 조건부 렌더링은 if문이 아닌 **항연산자** 이용해야 한다.**
+**5. 조건부 렌더링은 if문이 아닌 삼항연산자를 이용해야 한다.**
+
 > 만약, else의 값을 주고 싶지 않으면 `null` 값을 준다.
 
 ```jsx
-(1+1 === 2) ? (<p>정답</p>) : null
+1 + 1 === 2 ? <p>정답</p> : null;
 ```
 
 **6. React에서 여러 개의 HTML element를 표시할 때는 `map()` 함수를 사용한다.**
 
 > map 함수를 사용할 때는 반드시 **key' JSX 속성** 넣어주어야 한다. React에서 `map` 메서드 사용 시, key 속성을 넣지 않으면 아래와 같이 리스트의 각 항목에 key를 넣어야 한다는 경고가 표시된다.
+
 <center>
   <img src="https://github.com/sineTlsl/sineTlsl.github.io/assets/97720335/b0e5f150-2173-4512-9381-6ffd637450bd" width="80%" />
 </center>
@@ -150,9 +163,11 @@ export default function App() {
 <br>
 
 ## Create React App
+
 > `Create React App` 은 리액트 SPA를 쉽고 빠르게 개발할 수 있도록 만들어진 툴 체인이다.
 
 ### React 툴 체인 특징
+
 - 많은 파일과 컴포넌트 스케일링
 - 서드 파티 npm 라이브러리 사용
 - 일반적인 실수를 조기에 발견
@@ -162,6 +177,7 @@ export default function App() {
 개발 환경을 설정하고, 최신 JavaScript를 사용하게 해주며, 좋은 개발 경험과 프로적션 앱 최적화를 해준다. 현재는 Node 14.0.0 혹은 상위 버전 npm 5.6 혹은 상위 버전이 필요하다.
 
 ### React 프로젝트 생성
+
 새로운 React 프로젝트를 만들기 위해서는 다음과 같이 명령어를 터미널에 입력해야 한다. ( `my-app` 은 임의로 지정한 프로젝트명)
 
 밑에 두 개의 방법 중 하나를 선택하여 프로젝트를 생성할 수 있다.
@@ -193,7 +209,7 @@ npm start
   <img src="https://github.com/sineTlsl/sineTlsl.github.io/assets/97720335/409eddbf-55ee-48ac-aed6-67819ae4dc66" width="80%" />
 </center>
 
-React 프로젝트가 정상적으로 생성되고 실행될 경우에는 3000 port가 연결된 브라우저가 자동으로 켜진다. 
+React 프로젝트가 정상적으로 생성되고 실행될 경우에는 3000 port가 연결된 브라우저가 자동으로 켜진다.
 
 <br>
 
