@@ -2,7 +2,7 @@
 layout: post
 title: "[Error] ReactNative styled-components theme 타입 인식 못하는 에러"
 date: 2023-12-19 18:25:00 +900
-lastmod: 2023-12-19 18:25:00 +900
+lastmod: 2024-02-09 15:35:00 +900
 categories: [Error, ReactNative]
 tags: [Error, ReactNative, styled-components]
 use_math: true
@@ -69,6 +69,8 @@ export { customTheme };
 ```
 
 `strict` 모드를 `false`로 수정하긴 해서 일단 vscode 상에서 에러는 해결하였다. 올바른 방법은 아니지만 우선적으로 급한 부분은 해결을 하였으니 사용해보는 걸로 하고.. 아직 내가 부족한 부분이 많은 것 같으니 아시는 분들은 답변 좀 부탁드립니다… 🙏🏻🙏🏻
+
+<br><br>
 
 **Reference**
 
